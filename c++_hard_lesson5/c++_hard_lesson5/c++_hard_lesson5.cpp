@@ -12,18 +12,18 @@
 #include <deque>
 #include<queue>
 using namespace std;
+
 //1
 template<class BidirIt>
 void func(BidirIt const first, BidirIt const last)
 {
     unordered_set<string> Set(first, last); //+   
     copy(Set.begin(), Set.end(), ostream_iterator<string>(cout, "\n"));
-    cout << endl;    
+    cout << endl;
 }
 
 int main()
 {
-    //1
     {
         unordered_set<string> words;
         words.insert("one");
@@ -43,11 +43,11 @@ int main()
         setStr.insert("In");
         setStr.insert("Gentlemans");
         func(setStr.begin(), setStr.end());
-        array<string,3> arrStr;
+        array<string, 3> arrStr;
         arrStr[0] = "The";
         arrStr[1] = "TheSec";
         arrStr[2] = "The";
-        func(arrStr.begin(),arrStr.end());
+        func(arrStr.begin(), arrStr.end());
         list<string> lstStr;
         lstStr.push_back("List");
         lstStr.push_back("List2");
@@ -56,12 +56,12 @@ int main()
         func(lstStr.begin(), lstStr.end());
         std::deque<string> deq;
         deq.push_back("Gentlemans");
-        deq.push_back("The"); 
+        deq.push_back("The");
         deq.push_back("Gentlemans");
         func(deq.begin(), deq.end());
     }
-   //2
-    {               
+    //2
+    {
         set<string> myset;
         for (std::string line; std::getline(std::cin, line, '.'); ) {
             myset.insert(line);
