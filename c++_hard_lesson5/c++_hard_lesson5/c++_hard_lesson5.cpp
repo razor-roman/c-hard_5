@@ -12,6 +12,7 @@
 #include <deque>
 #include<queue>
 using namespace std;
+
 //1
 template<class BidirIt>
 void func(BidirIt const first, BidirIt const last)
@@ -23,7 +24,6 @@ void func(BidirIt const first, BidirIt const last)
 
 int main()
 {
-    //1
     {
         unordered_set<string> words;
         words.insert("one");
